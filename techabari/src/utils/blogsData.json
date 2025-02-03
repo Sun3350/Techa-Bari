@@ -1,0 +1,505 @@
+
+[
+  {
+    "_id": "1",
+    "title": "Introduction to React",
+    "description": "React is a JavaScript library for building user interfaces...",
+    "author": "John Doe",
+    "date": "2024-09-01",
+    "time": "12:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Programming"
+  },
+  {
+    "_id": "2",
+    "title": "Understanding JavaScript Closures",
+    "description": "JavaScript closures are a fundamental concept...",
+    "author": "Jane Smith",
+    "date": "2024-09-05",
+    "time": "3:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "JavaScript"
+  },
+  {
+    "_id": "3",
+    "title": "CSS Grid vs Flexbox",
+    "description": "Both CSS Grid and Flexbox are powerful layout systems...",
+    "author": "Alice Johnson",
+    "date": "2024-09-07",
+    "time": "9:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "CSS"
+  },
+  {
+    "_id": "4",
+    "title": "How to Build a REST API",
+    "description": "Building a RESTful API is essential for modern web applications...",
+    "author": "Bob Martin",
+    "date": "2024-09-10",
+    "time": "11:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "5",
+    "title": "Deploying with Docker",
+    "description": "Learn how to use Docker for deploying scalable applications...",
+    "author": "Claire Brown",
+    "date": "2024-09-12",
+    "time": "2:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "DevOps"
+  },
+  {
+    "_id": "6",
+    "title": "Node.js: Event-Driven Programming",
+    "description": "Node.js is built on an event-driven architecture...",
+    "author": "David Green",
+    "date": "2024-09-14",
+    "time": "4:15 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Node.js"
+  },
+  {
+    "_id": "7",
+    "title": "Introduction to TypeScript",
+    "description": "TypeScript is a typed superset of JavaScript...",
+    "author": "Emma Stone",
+    "date": "2024-09-16",
+    "time": "10:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Programming"
+  },
+  {
+    "_id": "8",
+    "title": "State Management in React with Redux",
+    "description": "Redux is a predictable state container for JavaScript apps...",
+    "author": "Frank Wilson",
+    "date": "2024-09-18",
+    "time": "1:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "9",
+    "title": "Asynchronous JavaScript: Promises and Async/Await",
+    "description": "Master asynchronous programming in JavaScript...",
+    "author": "George White",
+    "date": "2024-09-20",
+    "time": "5:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "JavaScript"
+  },
+  {
+    "_id": "10",
+    "title": "Building Scalable Microservices",
+    "description": "Microservices are essential for building scalable applications...",
+    "author": "Hannah Lee",
+    "date": "2024-09-22",
+    "time": "9:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Architecture"
+  },
+  {
+    "_id": "11",
+    "title": "What is WebAssembly?",
+    "description": "WebAssembly is a new type of code that can run in modern web browsers...",
+    "author": "Ivy Parker",
+    "date": "2024-09-23",
+    "time": "2:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "12",
+    "title": "GraphQL vs REST: Which is Better?",
+    "description": "GraphQL offers a new approach to API development...",
+    "author": "Jack Black",
+    "date": "2024-09-25",
+    "time": "11:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "API"
+  },
+  {
+    "_id": "13",
+    "title": "Optimizing React Performance",
+    "description": "Learn techniques to improve React app performance...",
+    "author": "Kate Silver",
+    "date": "2024-09-26",
+    "time": "6:45 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "14",
+    "title": "Exploring Python for Data Science",
+    "description": "Python is widely used in data science for its simplicity...",
+    "author": "Leo King",
+    "date": "2024-09-27",
+    "time": "12:15 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Python"
+  },
+  {
+    "_id": "15",
+    "title": "Introduction to Kubernetes",
+    "description": "Kubernetes is a powerful container orchestration platform...",
+    "author": "Mike Young",
+    "date": "2024-09-28",
+    "time": "4:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "DevOps"
+  },
+  {
+    "_id": "16",
+    "title": "Building a Portfolio Website",
+    "description": "Learn how to build a personal portfolio website from scratch...",
+    "author": "Nancy Davis",
+    "date": "2024-09-29",
+    "time": "8:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "17",
+    "title": "How to Create Responsive Websites",
+    "description": "Responsive design ensures your website works on all devices...",
+    "author": "Olivia Scott",
+    "date": "2024-09-30",
+    "time": "10:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "CSS"
+  },
+  {
+    "_id": "18",
+    "title": "Machine Learning with Python",
+    "description": "Python is widely used in machine learning for its libraries...",
+    "author": "Paul Adams",
+    "date": "2024-10-01",
+    "time": "1:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Python"
+  },
+  {
+    "_id": "19",
+    "title": "Building RESTful APIs with Node.js",
+    "description": "Node.js makes building scalable REST APIs easy...",
+    "author": "Quinn Baker",
+    "date": "2024-10-02",
+    "time": "2:45 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Node.js"
+  },
+  {
+    "_id": "20",
+    "title": "Docker for Beginners",
+    "description": "Learn the basics of Docker and containerization...",
+    "author": "Rachel Moore",
+    "date": "2024-10-03",
+    "time": "11:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "DevOps"
+  },
+  {
+    "_id": "21",
+    "title": "JavaScript Design Patterns",
+    "description": "Design patterns provide solutions to common JavaScript problems...",
+    "author": "Sam Hall",
+    "date": "2024-10-04",
+    "time": "5:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "JavaScript"
+  },
+  {
+    "_id": "22",
+    "title": "What is Serverless Architecture?",
+    "description": "Serverless architecture allows developers to run code without managing servers...",
+    "author": "Tina Cruz",
+    "date": "2024-10-05",
+    "time": "9:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Cloud"
+  },
+  {
+    "_id": "23",
+    "title": "Version Control with Git",
+    "description": "Git is an essential tool for managing source code...",
+    "author": "Uma Patel",
+    "date": "2024-10-06",
+    "time": "8:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Tools"
+  },
+  {
+    "_id": "24",
+    "title": "Python for Web Development",
+    "description": "Python frameworks like Django and Flask make web development easy...",
+    "author": "Vera Johnson",
+    "date": "2024-10-07",
+    "time": "10:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Python"
+  },
+  {
+    "_id": "25",
+    "title": "Introduction to Big Data",
+    "description": "Big data is transforming industries with powerful insights...",
+    "author": "Will Carter",
+    "date": "2024-10-08",
+    "time": "2:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Data Science"
+  },
+  {
+    "_id": "26",
+    "title": "Building Interactive UI with React",
+    "description": "React allows for dynamic, interactive user interfaces...",
+    "author": "Xander Ford",
+    "date": "2024-10-09",
+    "time": "3:45 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "27",
+    "title": "Understanding RESTful Web Services",
+    "description": "Learn the principles behind RESTful web services...",
+    "author": "Yasmine Clark",
+    "date": "2024-10-10",
+    "time": "1:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "28",
+    "title": "Testing in JavaScript with Jest",
+    "description": "Jest is a powerful testing framework for JavaScript applications...",
+    "author": "Zara Green",
+    "date": "2024-10-11",
+    "time": "9:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Testing"
+  },
+  {
+    "_id": "29",
+    "title": "Scaling Applications with Microservices",
+    "description": "Microservices architecture helps in building scalable systems...",
+    "author": "Alec Brown",
+    "date": "2024-10-12",
+    "time": "4:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Architecture"
+  },
+  {
+    "_id": "30",
+    "title": "JavaScript Async Functions Explained",
+    "description": "Async functions make working with asynchronous code easier...",
+    "author": "Becky King",
+    "date": "2024-10-13",
+    "time": "7:45 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "JavaScript"
+  },
+  {
+    "_id": "31",
+    "title": "Introduction to Blockchain",
+    "description": "Blockchain is revolutionizing industries with its decentralized ledger...",
+    "author": "Charlie Reed",
+    "date": "2024-10-14",
+    "time": "2:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Blockchain"
+  },
+  {
+    "_id": "32",
+    "title": "Deep Learning with TensorFlow",
+    "description": "TensorFlow is a popular framework for deep learning...",
+    "author": "Dana Foster",
+    "date": "2024-10-15",
+    "time": "10:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Data Science"
+  },
+  {
+    "_id": "33",
+    "title": "Building Secure Applications",
+    "description": "Security is essential in modern web applications...",
+    "author": "Ella Scott",
+    "date": "2024-10-16",
+    "time": "6:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Security"
+  },
+  {
+    "_id": "34",
+    "title": "API Testing with Postman",
+    "description": "Postman is a powerful tool for testing APIs...",
+    "author": "Fred Turner",
+    "date": "2024-10-17",
+    "time": "9:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Tools"
+  },
+  {
+    "_id": "35",
+    "title": "JavaScript ES6 Features You Should Know",
+    "description": "ES6 introduced many new features in JavaScript, like arrow functions and promises...",
+    "author": "Grace Mitchell",
+    "date": "2024-10-18",
+    "time": "8:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "JavaScript"
+  },
+  {
+    "_id": "36",
+    "title": "Building Realtime Applications with Socket.IO",
+    "description": "Socket.IO enables real-time, bidirectional communication...",
+    "author": "Harry Davis",
+    "date": "2024-10-19",
+    "time": "4:15 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "37",
+    "title": "Best Practices for Responsive Design",
+    "description": "Responsive design is essential for modern web applications...",
+    "author": "Isla Lee",
+    "date": "2024-10-20",
+    "time": "5:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "CSS"
+  },
+  {
+    "_id": "38",
+    "title": "Building a RESTful API with Python and Flask",
+    "description": "Flask is a lightweight Python web framework, perfect for building APIs...",
+    "author": "Jackie White",
+    "date": "2024-10-21",
+    "time": "12:45 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Python"
+  },
+  {
+    "_id": "39",
+    "title": "Web Security Fundamentals",
+    "description": "Security vulnerabilities can be devastating to web applications...",
+    "author": "Kevin Johnson",
+    "date": "2024-10-22",
+    "time": "11:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Security"
+  },
+  {
+    "_id": "40",
+    "title": "What is Cloud Computing?",
+    "description": "Cloud computing is the delivery of computing services over the internet...",
+    "author": "Liam Harris",
+    "date": "2024-10-23",
+    "time": "3:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Cloud"
+  },
+  {
+    "_id": "41",
+    "title": "Server-Side Rendering with Next.js",
+    "description": "Next.js enables server-side rendering in React apps...",
+    "author": "Mia Lewis",
+    "date": "2024-10-24",
+    "time": "4:30 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "42",
+    "title": "Data Analysis with Pandas",
+    "description": "Pandas is a powerful library for data manipulation and analysis...",
+    "author": "Nathan Gray",
+    "date": "2024-10-25",
+    "time": "10:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Data Science"
+  },
+  {
+    "_id": "43",
+    "title": "Introduction to Webpack",
+    "description": "Webpack is a module bundler for JavaScript applications...",
+    "author": "Olivia Ford",
+    "date": "2024-10-26",
+    "time": "9:30 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Tools"
+  },
+  {
+    "_id": "44",
+    "title": "Building Progressive Web Apps (PWAs)",
+    "description": "PWAs provide a native-like experience in web applications...",
+    "author": "Paul Adams",
+    "date": "2024-10-27",
+    "time": "2:15 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "45",
+    "title": "What is a CDN?",
+    "description": "A Content Delivery Network (CDN) helps deliver content faster...",
+    "author": "Quinn White",
+    "date": "2024-10-28",
+    "time": "11:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Web Development"
+  },
+  {
+    "_id": "46",
+    "title": "Testing React Components with React Testing Library",
+    "description": "React Testing Library makes testing React components easier...",
+    "author": "Rachel Evans",
+    "date": "2024-10-29",
+    "time": "1:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "47",
+    "title": "Building Full-Stack Applications with MERN",
+    "description": "The MERN stack consists of MongoDB, Express.js, React, and Node.js...",
+    "author": "Sam Brown",
+    "date": "2024-10-30",
+    "time": "8:00 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Full Stack"
+  },
+  {
+    "_id": "48",
+    "title": "Automating Tasks with Python",
+    "description": "Python is widely used for automating repetitive tasks...",
+    "author": "Tina Allen",
+    "date": "2024-10-31",
+    "time": "5:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+   
+
+ "cat": "Python"
+  },
+  {
+    "_id": "49",
+    "title": "Understanding Redux in React",
+    "description": "Redux helps manage state in complex React applications...",
+    "author": "Uma Taylor",
+    "date": "2024-11-01",
+    "time": "10:45 AM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "React"
+  },
+  {
+    "_id": "50",
+    "title": "Exploring Machine Learning Algorithms",
+    "description": "Machine learning algorithms are transforming industries...",
+    "author": "Victor Brown",
+    "date": "2024-11-02",
+    "time": "6:00 PM",
+    "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "cat": "Data Science"
+  }
+]

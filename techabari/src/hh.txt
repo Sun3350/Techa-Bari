@@ -1,0 +1,263 @@
+import React, { useState, useEffect } from "react";
+import { IoIosSend } from "react-icons/io";
+import ReactMarkdown from "react-markdown";
+import "./App.css";
+
+export default function Home() {
+  const [userInput, setUserInput] = useState("");
+  const [sessions, setSessions] = useState([]);
+  const [currentSession, setCurrentSession] = useState(null);
+  const [response, setResponse] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Fetch chat sessions for the logged-in user
+  useEffect(() => {
+    const fetchSessions = async () => {
+      const userId = getLoggedInUserId(); // Replace with actual user ID logic
+      const res = await fetch(`/api/chat/all-chats/${userId}`);
+      const data = await res.json();
+      setSessions(data);
+    };
+    fetchSessions();
+  }, []);
+
+  // Load history when a session is selected
+  useEffect(() => {
+    if (currentSession) {
+      setResponse(currentSession.history);
+    }
+  }, [currentSession]);
+
+  const handleUserInput = (e) => setUserInput(e.target.value);
+
+  const handleCreateSession = async () => {
+    const userId = getLoggedInUserId();
+    const res = await fetch("/api/chat/new-chats", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, sessionName: "New Chat" }),
+    });
+    const newSession = await res.json();
+    setSessions([...sessions, newSession]);
+    setCurrentSession(newSession);
+  };
+
+  const handleDeleteSession = async (sessionId) => {
+    await fetch(`/api/chat/session/${sessionId}`, { method: "DELETE" });
+    setSessions(sessions.filter((s) => s._id !== sessionId));
+    if (currentSession?._id === sessionId) setCurrentSession(null);
+  };
+
+  const handleSubmit = async () => {
+    if (!userInput.trim() || !currentSession) return;
+
+    setIsLoading(true);
+    try {
+      const res = await generateContent(userInput);
+      const newResponse = [
+        ...response,
+        { type: "user", message: userInput },
+        { type: "bot", message: res() },
+      ];
+      setResponse(newResponse);
+      setUserInput("");
+
+      // Save updated history
+      await fetch("/api/chat/save-chats/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ sessionId: currentSession._id, history: newResponse }),
+      });
+    } catch (error) {
+      console.error("Error generating response:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="chat-app">
+      {/* Sidebar */}
+      <div className="chat-sidebar">
+        <button onClick={handleCreateSession}>+ New Chat</button>
+        {sessions.map((session) => (
+          <div
+            key={session._id}
+            className={`chat-session ${
+              currentSession?._id === session._id ? "active" : ""
+            }`}
+            onClick={() => setCurrentSession(session)}
+          >
+            <span>{session.sessionName}</span>
+            <button onClick={() => handleDeleteSession(session._id)}>x</button>
+          </div>
+        ))}
+      </div>
+
+      {/* Chat Window */}
+      <div className="chat-window">
+        {currentSession ? (
+          <>
+            <div className="chat-history">
+              {response.map((msg, index) => (
+                <p key={index} className={`message ${msg.type}`}>
+                  <ReactMarkdown>{msg.message}</ReactMarkdown>
+                </p>
+              ))}
+              {isLoading && <p>Loading...</p>}
+            </div>
+            <div className="chat-input-container">
+              <input
+                value={userInput}
+                onChange={handleUserInput}
+                placeholder="Type your message here..."
+              />
+              <button onClick={handleSubmit}>
+                <IoIosSend />
+              </button>
+            </div>
+          </>
+        ) : (
+          <p>Select or create a chat session to begin.</p>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+check thid 
+
+import React,{useEffect, useState} from 'react'
+import { DotButton, useDotButton } from './EmblaCarouselDotButton'
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons
+} from './EmblaCarouselArrowButtons'
+import Autoplay from 'embla-carousel-autoplay'
+import axios from 'axios';
+
+import useEmblaCarousel from 'embla-carousel-react'
+
+
+const EmblaCarousel = (props) => {
+  const { slides, options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay({ playOnInit: false, delay: 3000 })])
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi)
+
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick
+  } = usePrevNextButtons(emblaApi)
+
+  //Featured POst
+  const [featuredPosts, setFeaturedPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchFeaturedPosts = async () => {
+      try {
+        const response = await axios.get('/api/featured-posts'); // Update with your API route
+        setFeaturedPosts(response.data);
+      } catch (error) {
+        console.error('Error fetching featured posts:', error);
+      }
+    };
+
+    fetchFeaturedPosts();
+  }, []);
+
+  const [categories, setCategories] = useState([]);
+  const [blogsByCategory, setBlogsByCategory] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  
+  useEffect(() => {
+    const fetchLatestBlogs = async () => {
+      try {
+        setLoading(true);
+        const response = await axios.get('http://localhost:5000/api/userPost/latest-blogs'); // Update the URL as needed
+        setCategories(response.data.categories);
+        setBlogsByCategory(response.data.blogsByCategory);
+      } catch (err) {
+        setError('Failed to fetch latest blogs.');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLatestBlogs();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
+
+  return (
+    <div className='w-full flex'>
+      <div className='w-[70%] '>
+    <section className="embla">
+      <div className="embla__viewport rounded-lg" ref={emblaRef}>
+        <div className="embla__container ">
+          {blogsByCategory.map((categoryData) => (
+            <div className="embla__slide " key={categoryData.category}>
+              <img className='w-full h-full  object-cover object-center' src={blog.image} alt={blog.title} />
+              <div className=' slide-blog absolute top-0 w-full h-full '>
+                <div className='max-w-[70%] '>
+                <div className='bg-slate-400 p-1 w-fit text-xs mb-3 text-white font-bold rounded'>{categoryData.category}</div>
+              <h2 className='text-white text-3xl font-bold'>{blog.title}</h2>
+             <p className='text-white'>{blog.description}</p>
+             </div>
+            
+             
+              </div>
+             
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
+        <div className="embla__dots">
+          {scrollSnaps.map((_, index) => (
+            <DotButton
+              key={index}
+              onClick={() => onDotButtonClick(index)}
+              className={'embla__dot'.concat(
+                index === selectedIndex ? ' embla__dot--selected' : ''
+              )}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+   </div>
+   <div className='w-[30%] px-4 ml-10 '>
+          <h1 className='font-bold uppercase mb-2'>Featured Posts</h1>
+           {featuredPosts.map(post => (
+        <div key={post._id} className="w-full flex p-4 items-center shadow-md rounded-lg my-1">
+          <img src={post.image} alt={post.title} className="rounded w-20" />
+          <h2 className="text-sm ml-3">{post.title}</h2>
+        </div>
+      ))}
+          
+        </div>
+    </div>
+  )
+}
+
+export default EmblaCarousel
+
+
+what is left to be fix 

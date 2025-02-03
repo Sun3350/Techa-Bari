@@ -1,0 +1,12 @@
+/* Add this in your CSS file */
+.backdrop-blur-sm {
+    backdrop-filter: blur(1px);
+  }
+  .admin-input{
+    background: none;
+    border: 1px solid var(--text-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+  }

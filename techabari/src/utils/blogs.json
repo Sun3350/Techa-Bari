@@ -1,0 +1,48 @@
+[
+    {
+      "image": "https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Exploring the Future of AI",
+      "description": "An in-depth look at how artificial intelligence is shaping the future of technology and society.",
+      "author": "John Doe",
+      "date": "2024-09-24",
+      "cat": "finance",
+      "time": "10:30 AM"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3194523/pexels-photo-3194523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Top 10 JavaScript Frameworks for 2024",
+      "description": "A comprehensive guide to the most popular JavaScript frameworks for modern web development.",
+      "author": "Jane Smith",
+      "date": "2024-09-23",
+      "cat": "finance",
+      "time": "11:00 AM"
+    },
+    {
+      "image": "https://images.pexels.com/photos/265667/pexels-photo-265667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "The Rise of Remote Work: A New Era",
+      "description": "How remote work is transforming the corporate landscape and what it means for the future of work.",
+      "author": "Emily Johnson",
+      "date": "2024-09-22",
+      "cat": "finance",
+      "time": "9:45 AM"
+    },
+    {
+      "image": "https://images.pexels.com/photos/4112283/pexels-photo-4112283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Mastering the Art of Digital Marketing",
+      "description": "Key strategies and tools to help you excel in digital marketing and grow your online presence.",
+      "author": "Michael Lee",
+      "date": "2024-09-21",
+      "cat": "finance",
+      "time": "2:00 PM"
+    },
+    {
+      "image": "https://images.pexels.com/photos/3178744/pexels-photo-3178744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "title": "Blockchain Technology: Beyond Cryptocurrency",
+      "description": "Exploring the various applications of blockchain technology outside of cryptocurrency.",
+      "author": "Sarah Williams",
+      "date": "2024-09-20",
+      "cat": "finance",
+      "time": "3:30 PM"
+    }
+  ]
+  

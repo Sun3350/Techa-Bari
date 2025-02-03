@@ -1,0 +1,60 @@
+.blog-input{
+    background: none;
+    border:  1px  solid var(--text-color);
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    padding: 10px;
+}
+.blog-input:focus{
+    outline: none;
+}
+.ql-editor p{
+    color: var(--text-color);
+    font-weight: 100;
+    font-size: 15px;
+}
+option{
+    background-color: var(--container-background);
+    cursor: pointer;
+    color: var(--text-color);
+}
+.ql-snow{
+    border-radius: 10px;
+}
+.ql-toolbar.ql-snow .ql-formats {
+    color: var(--text-color);
+
+    margin-right: 5px !important;
+}
+.ql-container.ql-snow {
+    margin-top: 10px !important;
+}
+
+.ql-toolbar.ql-snow + .ql-container.ql-snow{
+    border-top: 1px solid #ccc !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before{
+    color: var(--text-color);
+}
+button:hover .ql-stroke,
+.ql-picker-label:hover .ql-stroke {
+  fill: none;
+  stroke:  var(--text-color)  !important;
+}
+
+.ql-active .ql-stroke {
+  fill: none;
+  stroke:  var(--text-color)  !important;
+}
+
+button:hover .ql-fill,
+.ql-picker-label:hover .ql-fill {
+  fill: var(--text-color) !important;
+  stroke: none;
+}
+
+.ql-active .ql-fill {
+  fill:  var(--text-color)  !important;
+  stroke: none;
+}

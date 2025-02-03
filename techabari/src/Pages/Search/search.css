@@ -1,0 +1,36 @@
+.search-bar{
+    width: 70vh;
+    margin-right:3vh ;
+    background: none;
+    border: none;
+}
+.search-bar:focus{
+outline: none;
+}
+.search-container{
+    background-color: var(--detail-low-contrast);
+}
+.category-dropdown{
+    background: none;
+    cursor: pointer;
+    
+}
+.category-dropdown:focus{
+    outline: none;
+}
+.option{
+    border: 1px solid black;
+    padding: 10px;
+}
+.search-result{
+    
+flex: auto;
+flex-wrap: wrap;
+background-color: var(--detail-low-contrast);
+
+}
+.search-result-content{
+width: 60vh;
+height: 50vh;
+background-color: blanchedalmond;
+}
