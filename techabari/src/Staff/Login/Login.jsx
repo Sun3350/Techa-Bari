@@ -27,7 +27,7 @@ function StaffLogin() {
 
       if (response.data && response.data.token) {
         localStorage.setItem('token', response.data.token);
-        dispatch({ type: 'LOGIN_SUCCESS', payload: { token: response.data.token } });
+        dispatch({ type: 'STAFF_LOGIN', payload: { token: response.data.token } });
         showNotification('Login Succesfully')
         navigate('/staff/me');
       } else {

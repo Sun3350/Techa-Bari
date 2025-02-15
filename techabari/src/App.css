@@ -144,3 +144,6 @@ html {
     opacity: 1;
   }
 }
+span{
+  background-color: transparent !important;
+}

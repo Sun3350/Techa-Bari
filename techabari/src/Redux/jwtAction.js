@@ -8,7 +8,7 @@ export const loadUserFromToken = () => (dispatch) => {
     const decodedUser = jwtDecode(token);
 
     dispatch({
-      type: 'LOGIN_SUCCESS',
+      type: 'STAFF_LOGIN',
       payload: decodedUser,
     });
   }

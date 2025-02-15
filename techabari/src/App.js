@@ -23,6 +23,7 @@ import ChatBoard from './Chat/ChatBoard';
 import Header from './User/NavBar/Header'; // Import the Header component
 import SinglePage from './User/SinglePage/SinglePage';
 import Verification from './Pages/Subscriber/Verification';
+import Category from './User/Categories/Categories';
 
 function App() {
   const dispatch = useDispatch(); // Initialize Redux dispatch
@@ -65,7 +66,8 @@ const AppContent = () => {
 
   // Define the paths where you want to show the header
   const showHeader =
-    location.pathname !== '/login' &&
+    location.pathname !== '' &&
+    !location.pathname.startsWith('/you') &&
     !location.pathname.startsWith('/staff') &&
     !location.pathname.startsWith('/admin') &&
     !location.pathname.startsWith('/chat');
@@ -76,6 +78,7 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<UserSection />} />
         <Route path="/post/:id" element={<SinglePage />} />
+        <Route path="/categories/:category" element={<Category />} />
         <Route path="/you" element={<StaffLogin />} />
         <Route path="/staff/*" element={<StaffLayout />} />
         <Route path="/chat" element={<ChatApp />} />

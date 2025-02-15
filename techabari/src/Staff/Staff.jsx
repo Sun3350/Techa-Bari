@@ -104,7 +104,7 @@ useEffect(() => {
       navigate('/staff/me'); // Redirect to staff page after admin logout
     } else {
       // Log out staff
-      dispatch({ type: 'LOGOUT' });
+      dispatch({ type: 'STAFF_LOGOUT' });
       localStorage.removeItem('token');
       navigate('/'); // Redirect to home page after staff logout
     }

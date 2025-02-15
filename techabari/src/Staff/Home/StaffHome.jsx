@@ -252,10 +252,10 @@ function UserBlogPosts() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                
               >
-                <div className="mt-3 p-3 border rounded flex  items-center">
-                  <img className="w-20 rounded mr-3 transition-transform hover:scale-105" src={blog.image} alt="" />
-                  <h2 className="font-normal">{blog.title}</h2>
-                </div>
+                 <div className="mt-3 p-3 border rounded flex items-center">
+                <div className='w-28 h-12 mr-3'><img className="w-full h-full rounded object-cover transition-transform hover:scale-105" src={blog.image} alt="" /></div>
+                <h2 className="font-normal">{blog.title}</h2>
+              </div>
               </motion.a>
             ))
           ) : (
@@ -278,10 +278,10 @@ function UserBlogPosts() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div className="mt-3 p-3 border rounded flex  items-center">
-                  <img className="w-20 rounded mr-3 transition-transform hover:scale-105" src={blog.image} alt="" />
-                  <h2 className="font-normal">{blog.title}</h2>
-                </div>
+                <div className="mt-3 p-3 border rounded flex items-center">
+                <div className='w-24 h-12 mr-3'><img className="w-full h-full rounded object-cover transition-transform hover:scale-105" src={blog.image} alt="" /></div>
+                <h2 className="font-normal">{blog.title}</h2>
+              </div>
               </motion.a>
             ))
           ) : (
@@ -311,7 +311,7 @@ function UserBlogPosts() {
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
               <div className="mt-3 p-3 border rounded flex items-center">
-                <img className="w-20 rounded mr-3 transition-transform hover:scale-105" src={blog.image} alt="" />
+                <div className='w-24 h-12 mr-3'><img className="w-full h-full rounded object-cover transition-transform hover:scale-105" src={blog.image} alt="" /></div>
                 <h2 className="font-normal">{blog.title}</h2>
               </div>
             </motion.a>

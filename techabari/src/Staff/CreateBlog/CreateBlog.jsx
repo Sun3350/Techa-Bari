@@ -25,7 +25,37 @@ const CreateBlog = () => {
     content: '',
     category: '',
     image: null,
+    imageDesc: ''
   });
+
+  const categories = [
+    "FinTech",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Cybersecurity",
+    "Cloud Computing",
+    "Blockchain",
+    "Internet of Things (IoT)",
+    "Augmented Reality (AR)",
+    "Virtual Reality (VR)",
+    "Data Science",
+    "Big Data",
+    "Quantum Computing",
+    "DevOps",
+    "Web Development",
+    "Mobile App Development",
+    "Software Engineering",
+    "Programming Languages",
+    "Game Development",
+    "Open Source",
+    "Tech Reviews",
+    "Startups & Entrepreneurship",
+    "Networking",
+    "Gadgets & Hardware",
+    "UI/UX Design",
+    "Automation & Robotics",
+    "5G & Future Technologies",
+  ]
 
   const [imagePreview, setImagePreview] = useState('');
   const [isDraftSaved, setIsDraftSaved] = useState(false);
@@ -64,13 +94,14 @@ const CreateBlog = () => {
         },
       });
 
-      const { title, content, category, image } = response.data;
+      const { title, content, category, image, imageDesc } = response.data;
 
       setFormData({
         title: title || '', 
         content: content || '',
         category: category || '',
         image: null,
+        ImageDesc: imageDesc || '',
       });
 
       setImagePreview(image);
@@ -106,7 +137,7 @@ const CreateBlog = () => {
   };
 
   const validateForm = () => {
-    if (!formData.title || !formData.content || !formData.category) {
+    if (!formData.title || !formData.content || !formData.category || ! formData.imageDesc) {
       showNotification('All fields are required.');
       return false;
     }
@@ -123,6 +154,7 @@ const CreateBlog = () => {
       data.append('title', formData.title);
       data.append('content', formData.content);
       data.append('category', formData.category);
+      data.append('imageDesc', formData.imageDesc);
       if (formData.image) data.append('image', formData.image);
 
       const endpoint = mode === 'edit' 
@@ -169,17 +201,20 @@ const CreateBlog = () => {
             onChange={handleChange}
             className="blog-input w-[60%] uppercase"
           />
-          <select
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            className="blog-input w-[35%] cursor-pointer"
-          >
-            <option value="">Select Category</option>
-            <option value="Technology">Technology</option>
-            <option value="Travel">Travel</option>
-            <option value="Food">Food</option>
-          </select>
+                     <select
+             name="category"
+             value={formData.category}
+             onChange={handleChange}
+             className="blog-input w-[35%] cursor-pointer"
+           >
+             <option value="">Select Category</option>
+             {categories.map((category, index) => (
+               <option key={index} value={category}>
+                 {category}
+               </option>
+             ))}
+           </select>
+           
         </div>
 
         <div className="flex items-center justify-center flex-col w-full mb-5">
@@ -202,6 +237,16 @@ const CreateBlog = () => {
               id="dropzone-file"
             />
           </label>
+          
+          <input
+            type="text"
+            name="imageDesc"
+            placeholder="Image Description"
+            value={formData.imageDesc}
+            onChange={handleChange}
+            className=" w-[100%]  blog-input"
+          />
+        
           {imagePreview && <img src={imagePreview} alt="Preview" className="image-preview rounded" />}
         </div>
         <div className="shadow-md p-5 rounded">

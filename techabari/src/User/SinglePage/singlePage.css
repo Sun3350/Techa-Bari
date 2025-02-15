@@ -1,0 +1,28 @@
+.social-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: transform 0.3s ease, top 0.3s ease; /* Smooth transition */
+  }
+  
+  .social-container.hide {
+    transform: translateX(-65%); /* Partially hides the header */
+  }
+  
+  .social-container.show {
+    transform: translateX(0); /* Fully shows the header */
+  }
+  .single-textarea {
+      min-height: 20px; /* Set a minimum height */
+      max-height: 200px; /* Restrict maximum height */
+      resize: none; /* Allow resizing but only vertically */
+      overflow-y: auto; /* Add scroll when max height is reached */
+      width: 100%; /* Ensure it takes full width */
+      font-size: 12px; /* Optional: Improve readability */
+      outline:  none;
+      border-radius: 20px;
+  }
+  .social-icon{
+    
+  }

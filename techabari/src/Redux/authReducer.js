@@ -10,8 +10,8 @@ const initialState = {
 };
 
 // Action Types
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGOUT = 'LOGOUT';
+export const STAFF_LOGIN = 'STAFF_LOGIN';
+export const STAFF_LOGOUT = 'STAFF_LOGOUT';
 export const ADMIN_LOGIN = 'ADMIN_LOGIN';
 export const ADMIN_LOGOUT = 'ADMIN_LOGOUT';
 export const UPDATE_LOGIN_TIME = 'UPDATE_LOGIN_TIME';
@@ -22,25 +22,28 @@ export const SUBSCRIBE_USER = 'SUBSCRIBE_USER';
 // Reducer function
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_SUCCESS:
+    case STAFF_LOGIN:
       return {
         ...state,
         isAuthenticated: true,
+        role: "staff",
         user: action.payload.user,
         isAdminLoggedOut: false,
       };
 
-    case LOGOUT:
+    case STAFF_LOGOUT:
       return {
         ...state,
         isAuthenticated: false,
         user: null,
+        role: null,
         isAdminLoggedOut: false,
       };
 
     case ADMIN_LOGIN:
       return {
         ...state,
+        role: "admin",
         isAdminLoggedIn: true,
         user: action.payload.user,
         loginTime: Date.now(), // Save the session start time when admin logs in
@@ -52,6 +55,7 @@ const authReducer = (state = initialState, action) => {
         isAdminLoggedIn: false,
         isAdminLoggedOut: true,
         user: null,
+        role: null,
         loginTime: null,
       };
 

@@ -5,7 +5,7 @@ import axios from 'axios';
 import './embla.css';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const EmblaCarousel = (props) => {
   const { options } = props;
@@ -17,7 +17,8 @@ const EmblaCarousel = (props) => {
   const [blogs, setBlogs] = useState([]); // Flat array of blogs
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const maxTitleLength = 200;
+  const maxContentLength = 300;
+  const maxTitleLength = 40;
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -86,24 +87,28 @@ const handleView = async (postId) => {
           <div className="embla__viewport rounded-lg" ref={emblaRef}>
             <div className="embla__container">
               {blogs.map((blog) => (
-                <div className="embla__slide cursor-pointer" key={blog._id} 
-                onClick={() => {
+                <div className="embla__slide " key={blog._id} >
+                  <img src={blog.image} className="w-full h-full object-cover object-center" />
+                  <div className="slide-blog absolute top-0 w-full h-full">
+                  <div className='bg-slate-400 p-1 w-fit text-xs mb-3 text-white font-bold rounded cursor-pointer'>
+                     <Link to={`/categories/${blog.category.toLowerCase().replace(/\s+/g, '-')}`}>
+                       {blog.category}
+                     </Link>
+                   </div>
+                   <div className='cursor-pointer'  onClick={() => {
                   handleView(blog._id);
                   navigate(`/post/${blog._id}`); // Navigate to post details page
                 }}>
-                  <img src={blog.image} className="w-full h-full object-cover object-center" />
-                  <div className="slide-blog absolute top-0 w-full h-full">
-                  <div className='bg-slate-400 p-1 w-fit text-xs mb-3 text-white font-bold rounded'>{blog.category}</div>
                   <h2 className='text-white text-2xl font-bold'>{blog.title}</h2>
                   <div
                        className="text-white text-sm leading-relaxed font-[200] mt-1"
                        dangerouslySetInnerHTML={{
-                         __html: blog.content.length > maxTitleLength 
-                           ? blog.content.slice(0, maxTitleLength) + '...' 
+                         __html: blog.content.length > maxContentLength 
+                           ? blog.content.slice(0, maxContentLength) + '...' 
                            : blog.content,
                        }}
                      />
-               
+                  </div>
            </div>
                 </div>
               ))}
@@ -144,8 +149,12 @@ const handleView = async (postId) => {
                   animate="visible"
                   custom={index} // Pass index to the variants for staggered animation
                 >
-                  <img src={post.image} className="rounded w-20"  />
-                  <h2 className="text-sm ml-3 font-bold">{post.title}</h2>
+                <div className='w-28 h-12 mr-3'><img className="w-full h-full rounded object-cover transition-transform hover:scale-105" src={post.image} alt="" /></div>
+                <h2 className="text-sm ml-3 font-bold">
+                     {post.title.length > maxTitleLength 
+                       ? post.title.slice(0, maxTitleLength) + '...' 
+                       : post.title}
+                   </h2>
                 </motion.div>
               ))
              )}
